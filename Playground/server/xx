@@ -1,0 +1,43 @@
+Version 1.8.9
+Syntax:   tsc [options] [file ...]
+
+Examples: tsc hello.ts
+          tsc --out file.js file.ts
+          tsc @args.txt
+
+Options:
+ --allowJs                           Allow javascript files to be compiled.
+ --allowSyntheticDefaultImports      Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+ --allowUnreachableCode              Do not report errors on unreachable code.
+ --allowUnusedLabels                 Do not report errors on unused labels.
+ -d, --declaration                   Generates corresponding '.d.ts' file.
+ --experimentalDecorators            Enables experimental support for ES7 decorators.
+ --forceConsistentCasingInFileNames  Disallow inconsistently-cased references to the same file.
+ -h, --help                          Print this message.
+ --init                              Initializes a TypeScript project and creates a tsconfig.json file.
+ --jsx KIND                          Specify JSX code generation: 'preserve' or 'react'
+ --mapRoot LOCATION                  Specifies the location where debugger should locate map files instead of generated locations.
+ -m KIND, --module KIND              Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+ --moduleResolution                  Specifies module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+ --newLine NEWLINE                   Specifies the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
+ --noEmit                            Do not emit outputs.
+ --noEmitOnError                     Do not emit outputs if any errors were reported.
+ --noFallthroughCasesInSwitch        Report errors for fallthrough cases in switch statement.
+ --noImplicitAny                     Raise error on expressions and declarations with an implied 'any' type.
+ --noImplicitReturns                 Report error when not all code paths in function return a value.
+ --noImplicitUseStrict               Do not emit 'use strict' directives in module output.
+ --outDir DIRECTORY                  Redirect output structure to the directory.
+ --outFile FILE                      Concatenate and emit output to single file.
+ --preserveConstEnums                Do not erase const enum declarations in generated code.
+ --pretty KIND                       Stylize errors and messages using color and context. (experimental)
+ -p DIRECTORY, --project DIRECTORY   Compile the project in the given directory.
+ --reactNamespace                    Specifies the object invoked for createElement and __spread when targeting 'react' JSX emit
+ --removeComments                    Do not emit comments to output.
+ --rootDir LOCATION                  Specifies the root directory of input files. Use to control the output directory structure with --outDir.
+ --sourceMap                         Generates corresponding '.map' file.
+ --sourceRoot LOCATION               Specifies the location where debugger should locate TypeScript files instead of source locations.
+ --suppressImplicitAnyIndexErrors    Suppress noImplicitAny errors for indexing objects lacking index signatures.
+ -t VERSION, --target VERSION        Specify ECMAScript target version: 'ES3' (default), 'ES5', or 'ES2015' (experimental)
+ -v, --version                       Print the compiler's version.
+ -w, --watch                         Watch input files.
+ @<file>                             Insert command line options and files from a file.

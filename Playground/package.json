@@ -2,10 +2,11 @@
   "name": "playground-node-express-bookshelf-angular2",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" \"nodemon server/server.js\" ",
+    "start": "concurrently \"npm run tsc:w:server\" \"npm run tsc:w:client\" \"npm run lite\" \"nodemon server/server.js\" ",
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
+    "tsc:w:server": "tsc -w -p ./server",
+    "tsc:w:client": "tsc -w -p ./client",
+    "lite": "lite-server -c client/bs-config.json",
     "typings": "typings",
     "postinstall": "typings install"
   },
