@@ -1,13 +1,9 @@
-// server.js
-
-// BASE SETUP
-// =============================================================================
-
 // call the packages we need
 import express = require('express');       
 import bodyParser = require('body-parser');
 
-import {User} from './models'
+import repository = require('./repository');
+
 // import Bookshelf from 'bookshelf';
 
 var app = express();
@@ -22,10 +18,9 @@ var router = express.Router();
     
 // test route (http://localhost:8080/api)
 router.get('/', function(req, res) {    
-    new User().fetch().then(
-        function(result) {
-            res.json(result.toJSON());        
-    });
+    repository.User.then(user => 
+        res.json(user.toJSON())
+        );
 });
 
 // all of our routes will be prefixed with /api
@@ -36,7 +31,4 @@ app.listen(port);
     
 console.log('Running... ');
 
-new User().fetch().then(
-    function(result) {
-        console.log(result.toJSON());        
-});
+//repository.User.then(user => console.log(user.toJSON()));

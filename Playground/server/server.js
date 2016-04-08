@@ -1,11 +1,8 @@
-// server.js
 "use strict";
-// BASE SETUP
-// =============================================================================
 // call the packages we need
 var express = require('express');
 var bodyParser = require('body-parser');
-var models_1 = require('./models');
+var repository = require('./repository');
 // import Bookshelf from 'bookshelf';
 var app = express();
 // configure app to use bodyParser()
@@ -16,8 +13,8 @@ var port = process.env.PORT || 8779;
 var router = express.Router();
 // test route (http://localhost:8080/api)
 router.get('/', function (req, res) {
-    new models_1.User().fetch().then(function (result) {
-        res.json(result.toJSON());
+    repository.User.then(function (user) {
+        return res.json(user.toJSON());
     });
 });
 // all of our routes will be prefixed with /api
@@ -25,7 +22,5 @@ app.use('/api', router);
 // start server
 app.listen(port);
 console.log('Running... ');
-new models_1.User().fetch().then(function (result) {
-    console.log(result.toJSON());
-});
+//repository.User.then(user => console.log(user.toJSON())); 
 //# sourceMappingURL=server.js.map
